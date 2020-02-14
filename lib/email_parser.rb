@@ -11,10 +11,7 @@ def initialize(emails)
 end
 
 def parse
-  @emails_array = @emails.split(" ")
-  @emails_array.each {|email| email.chop! if email.end_with?(",")}
-  
-  @emails_array.uniq
+  @emails.split(/, | /)
   
 end
   
